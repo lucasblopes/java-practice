@@ -1,8 +1,12 @@
 
 public class TicketNormal extends Ticket {
 
+    public TicketNormal(int value) {
+        super(value);
+    }
+
     @Override
     public void printValue() {
-        System.out.print("Normal Ticket: " + value);
+        System.out.println("Normal Ticket: " + value);
     }
 }

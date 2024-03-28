@@ -1,27 +1,28 @@
 
 public class TicketVip extends Ticket {
 
-    protected int valuePlus;
+    protected int valuePlusVip;
 
     public TicketVip() {
         super();
     }
 
-    public TicketVip(int value, int valuePlus) {
+    public TicketVip(int value, int valuePlusVip) {
         super(value);
-        this.setValuePlus(valuePlus);
+        this.setValuePlusVip(valuePlusVip);
     }
 
-    public int getValue() {
-        return value + valuePlus;
+    public int getValueVip() {
+        return super.getValue() + this.valuePlusVip;
     }
 
-    public void setValuePlus(int ValuePlus) {
-        this.valuePlus = valuePlus;
+    public void setValuePlusVip(int valuePlusVip) {
+        if (valuePlusVip > 0)
+            this.valuePlusVip = valuePlusVip;
     }
 
     @Override
     public void printValue() {
-        System.out.println("Value = " + this.valuePlus + value);
+        System.out.println("Vip Ticket : " + (super.getValue() + this.valuePlusVip));
     }
 }

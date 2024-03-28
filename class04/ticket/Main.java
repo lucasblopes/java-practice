@@ -4,15 +4,15 @@ public class Main {
     public static void main(String args[]) {
 
         int standardValue = 50;
-        int vipValue = 15;
+        int vipValue = 20;
         int cabinValue = 30;
 
-        TicketVip ticketVip = new TicketVip(standardValue, vipValue);
         TicketNormal ticketNormal = new TicketNormal(standardValue);
-        TicketCabin ticketCabin = new TicketCabin(vipValue, cabinValue);
+        TicketVip ticketVip = new TicketVip(standardValue, vipValue);
+        TicketCabin ticketCabin = new TicketCabin(standardValue, vipValue, cabinValue);
 
-        ticketVip.printValue();
         ticketNormal.printValue();
+        ticketVip.printValue();
         ticketCabin.printValue();
 
     }
